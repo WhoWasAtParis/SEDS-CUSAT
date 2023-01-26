@@ -83,6 +83,42 @@
 	</header>
 	<!-- End Header -->
 
+	<!-- pop up -->
+	<div class="modal open">
+		<div class="modal-overlay" onclick="closeModal()"></div>
+		<div class="modal-card">
+		  <div class="modal-body">
+			<div class="modal-header">Students Space Summit 23</div>
+			<div class="modal-content">
+				Students Space Summit 2023 registration is live. Grab Your Tickets Now!
+				<br>
+				<a href="https://spaceupcusat.org/sss"><button id="blog_more" class="blog-more">Grab Ticket</button></a>
+			</div>
+			<div class="modal-footer">
+			  <button class="blog-more" onclick="closeModal()">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <script>
+		function closeModal() {
+		  document.querySelector(".modal").classList.remove("open");
+		}
+		function openModal() {
+		  document.querySelector(".modal").classList.add("open");
+		}
+  
+		/* Actual screen view hight for IOS */
+		function setViewHeight() {
+		  const vh = `${window.innerHeight}px`;
+		  document.documentElement.style.setProperty("--screen-h", vh);
+		}
+		setViewHeight();
+		window.addEventListener("resize", setViewHeight);
+	  </script>
+	<!-- end pop up -->
+
 	<main id="main">
 
 		<!-- ======= About Section ======= -->
